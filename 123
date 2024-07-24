@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提交表單</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: calc(100% - 22px);
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>提交表單</h1>
+        <form id="myForm">
+            <input type="text" id="inputField" placeholder="輸入一些文字" required>
+            <br>
+            <button type="button" onclick="submitForm()">提交</button>
+        </form>
+        <div id="confirmationMessage" style="display: none; margin-top: 20px; color: green;">
+            表單已成功提交！
+        </div>
+    </div>
+    <script>
+        function submitForm() {
+            // 可以在這裡處理表單數據，例如發送到伺服器
+            document.getElementById('confirmationMessage').style.display = 'block';
+            document.getElementById('myForm').reset(); // 重置表單
+        }
+    </script>
+</body>
+</html>
